@@ -1,0 +1,3 @@
+function getBeers() {
+  alert("beer")
+}

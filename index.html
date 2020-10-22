@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>beeeeer</title>
+
+    <script src="main.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    choose the features of your beer: <br><br><br>
+    minimum alcohol volume <br>
+    <input type="range" name="min_alc" value="5" max="15" min="0"> <br> <br>
+
+    maximum alcohol volume <br>
+    <input type="range" name="max_alc" value="5" max="15" min="0"> <br> <br>
+
+    your style preference <br>
+    <div>
+      <input type="checkbox" id="lager" name="lager" value="Lager">
+      <label for="lager"> Lager</label><br>
+
+      <input type="checkbox" id="IPA" name="IPA" value="IPA">
+      <label for="IPA"> IPA</label><br>
+
+      <input type="checkbox" id="ale" name="ale" value="Ale">
+      <label for="ale"> Ale </label><br>
+
+      <input type="checkbox" id="stout" name="stout" value="Stout">
+      <label for="stout"> Stout</label><br>
+
+      <input type="checkbox" id="pilsner" name="pilsner" value="Pilsner">
+      <label for="pilsner"> Pilsner</label><br>
+
+      <input type="checkbox" id="porter" name="porter" value="Porter">
+      <label for="porter"> Porter</label><br>
+
+      <input type="checkbox" id="cider" name="cider" value="Cider">
+      <label for="cider"> Cider</label><br>
+
+      <input type="checkbox" id="radler" name="radler" value="Radler">
+      <label for="radler"> Radler</label><br>
+
+      <input type="checkbox" id="other" name="other" value="Other" checked>
+      <label for="other"> Other</label><br>
+    </div>
+
+    <br><br><br>
+
+    <button type="button" name="button" onclick="getBeers()">get beers!</button>
+  </body>
+</html>
