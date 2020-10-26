@@ -4,19 +4,26 @@
     <meta charset="utf-8">
     <title>beeeeer</title>
 
+    <link rel="stylesheet" href="main.css">
+
     <script src="main.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body onload="updateAlc">
 
     choose the features of your beer: <br><br><br>
     minimum alcohol volume <br>
-    <input type="range" name="min_alc" value="5" max="15" min="0"> <br> <br>
+    <p id="min_alc_lab">5%</p>
+    <input type="range" name="min_alc" value="0.05" max="0.15" min="0" step="0.01" id="min_alc" onchange="updateAlc()">
+    <br> <br>
 
     maximum alcohol volume <br>
-    <input type="range" name="max_alc" value="5" max="15" min="0"> <br> <br>
+    <p id="max_alc_lab">5%</p>
+    <input type="range" name="max_alc" value="0.05" max="0.15" min="0" step="0.01" id="max_alc" onchange="updateAlc()">
+    <br> <br>
 
     your style preference <br>
-    <div>
+    <form action="#" method="post" class="styles" id="styles">
+
       <input type="checkbox" id="lager" name="lager" value="Lager">
       <label for="lager"> Lager</label><br>
 
@@ -43,10 +50,25 @@
 
       <input type="checkbox" id="other" name="other" value="Other" checked>
       <label for="other"> Other</label><br>
-    </div>
 
-    <br><br><br>
+    </form>
+
+    <br><br>
 
     <button type="button" name="button" onclick="getBeers()">get beers!</button>
+
+    <br><br>
+    
+    <table id="table">
+      <thead>
+        <th>Name of brewery</th>
+        <th>Name of beer</th>
+        <th>Style</th>
+        <th>Alcohol percentage</th>
+      </thead>
+      <tbody id="tbody">
+
+      </tbody>
+    </table>
   </body>
 </html>
